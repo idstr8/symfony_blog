@@ -1,0 +1,22 @@
+{% extends 'BloggerBlogBundle::layout.html.twig' %}
+
+{% block title %}Контакты{% endblock %}
+{% block body %}
+  <header>
+    <h1>Контакты symblog</h1>
+  </header>
+
+  <p>Чтобы с нами связаться, заполните, пожалуйста, форму:</p>
+
+  <form action="{{ path('blogger_blog_contacts') }}" method="post" {{ form_enctype(form) }} class="blogger">
+    {{ form_errors(form) }}
+
+    {{ form_row(form.name) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.subject) }}
+    {{ form_row(form.body) }}
+
+    {{ form_rest(form) }}
+    <input type="submit" name="send" value="Send">
+  </form>
+{% endblock %}

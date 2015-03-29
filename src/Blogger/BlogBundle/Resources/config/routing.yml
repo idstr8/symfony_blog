@@ -1,0 +1,17 @@
+blogger_blog_homepage:
+  path:     /
+  defaults: { _controller: BloggerBlogBundle:Page:index }
+  requirements:
+    _method: GET
+
+blogger_blog_about:
+  path:     /about
+  defaults: { _controller: BloggerBlogBundle:Page:about }
+  requirements:
+    _method: GET
+
+blogger_blog_contacts:
+  path:     /contacts
+  defaults: { _controller: BloggerBlogBundle:Page:contacts }
+  requirements:
+    _method: GET
